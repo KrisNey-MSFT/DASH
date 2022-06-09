@@ -79,9 +79,9 @@ Why do we need this scenario?  There is a huge cost associated with establishing
 | 5 | Private Link Service Link Service (dest side of Private Link) IPv6 to IPv4; DNAT’ing     |  | |
 | 6 | Flow replication; supporting High Availability (HA); flow efficiently replicates to secondary card; Active/Passive (depending upon ENI policy) or can even have Active/Active; OR provision the same ENI over multiple devices w/o multiple SDN appliances – Primaries for a certain set of VMS can be on both     |  | Not a must have for Private Preview <img width=400/>|
 
-## Virtual Port and Packet Direction
+## Elastic Network Interface (ENI aka Virtual Port) and Packet Direction
 
-An SDN appliance in a multi-tenant network appliance (meaning 1 SDN appliance will have multiple cards; 1 card will have multiple machines or bare-metal servers), which supports Virtual Ports.   These can map to policy buckets corresponding to customer workloads, example: Virtual Machines, Bare Metal servers.
+An SDN appliance in a multi-tenant network appliance (meaning 1 SDN appliance will have multiple cards; 1 card will have multiple machines or bare-metal servers), which supports ENIs (aka Virtual Ports).  Add more about ENI here.   These can map to policy buckets corresponding to customer workloads, example: Virtual Machines, Bare Metal servers.
 
 - The SDN controller will create these virtual ports on SDN appliance and associate corresponding SDN policies like – Route, ACL, NAT etc. to these virtual ports.  In other words, our software will communicate with the cards, hold card inventory and SDN placement, call API’s that are exposed through the card create policies, setup ENI, routes, ACLs, NAT, and different rules.
 - Each Virtual port will be created with an ENI identifier like – Mac address, VNI or more.
